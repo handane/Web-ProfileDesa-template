@@ -7,8 +7,12 @@
    <title>Kelurahan Mentawir</title>
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
-
 </head>
+<style>
+   td {
+      padding: 5px;
+   }
+</style>
 
 <body>
    <!-- Navbar -->
@@ -68,15 +72,43 @@
    <!-- end navbar -->
    <!-- artikel -->
    <div class="container-fluid">
-      <h5 class="container artikel">Transparansi</h5>
+      <h5 class="container artikel color-hijau-2 mb-4">Kontak</h5>
+      <div class="container artikel">
+         <figure>
+            <img src="image/lembaga.jpg" alt="" style="width: 300px;">
+         </figure>
+         <h5>Kantor Kelurahan Mentawir</h5>
+         <table>
+            <tr>
+               <th>Alamat</th>
+               <td>:</td>
+               <td>Jl. Mulawarman, RT 002</td>
+            </tr>
+            <tr>
+               <th>Email</th>
+               <td>:</td>
+               <td>-</td>
+            </tr>
+            <tr>
+               <th>Telpon</th>
+               <td>:</td>
+               <td>081253353304</td>
+            </tr>
+            <tr>
+               <th>Kode Pos</th>
+               <td>:</td>
+               <td>76148</td>
+            </tr>
+         </table>
+      </div>
    </div>
    <!-- end artikel -->
 
-   <div style="height: 1000px;"></div>
+   <div style="height: 300px;"></div>
    <footer>
       <div class="container-fluid">
          <div class="text-center p-4">
-            &copy;<b>2022 - Kelurahan Mentawir | Website By </b> Penajam 25 KKN48 Universitas Mulawarman
+            &copy;<b>2022 - Desa | Website By </b> Pro
          </div>
    </footer>
    </div>
@@ -88,7 +120,7 @@
    <script>
       $(function() {
          $(window).scroll(function() {
-            if ($(window).scrollTop() <= 100) {
+            if ($(window).scrollTop() <= 50) {
                $('.logo').removeClass('scroll_logo')
             } else {
                $('.logo').addClass('scroll_logo')
@@ -97,7 +129,7 @@
       });
       $(function() {
          $(window).scroll(function() {
-            if ($(window).scrollTop() <= 100) {
+            if ($(window).scrollTop() <= 50) {
                $('.navbar').removeClass('scroll_navbar')
             } else {
                $('.navbar').addClass('scroll_navbar')
@@ -106,7 +138,7 @@
       });
       $(function() {
          $(window).scroll(function() {
-            if ($(window).scrollTop() <= 100) {
+            if ($(window).scrollTop() <= 50) {
                $('.navbar .wr-putih').removeClass('scroll_wr-putih')
             } else {
                $('.navbar .wr-putih').addClass('scroll_wr-putih')

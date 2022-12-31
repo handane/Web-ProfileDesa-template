@@ -1,15 +1,13 @@
-<?php
-include('admin/db.php');
-?>
 <!doctype html>
 <html lang="en">
 
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Kelurahan Mentawir</title>
-   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <title>Desa</title>
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -72,73 +70,81 @@ include('admin/db.php');
    <div class="container-fluid container">
       <div class="artikel card border-white color-hijau">
          <div class="card-body text-center">
-            <h4 class="color-hijau-2">Tingkat Pendidikan</h4>
+            <h4 class="color-hijau">Wilayah</h4>
          </div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127652.98192520226!2d116.7094698864192!3d-1.0442496199309563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df6ca63e47ba1b9%3A0xeda1efa370cd2c52!2sMentawir%2C%20Kec.%20Sepaku%2C%20Kabupaten%20Penajam%20Paser%20Utara%2C%20Kalimantan%20Timur!5e0!3m2!1sid!2sid!4v1656834916236!5m2!1sid!2sid" width="100%" height="500" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+         </iframe>
          <div class="row col-md-12 m-auto text-center">
-            <?php
-            $x = mysqli_query($conn, "SELECT * FROM tingkat_pendidikan");
-            if (mysqli_num_rows($x) > 0) {
-               while ($p = mysqli_fetch_array($x)) {
-            ?>
-                  <table class="mt-5">
-                     <tbody>
-                        <tr>
-                           <td>
-                              <div class="display-2"><?php echo $p['tamat_s1'] ?></div><br>
-                              <h6>Tamat S1</h6>
-                           </td>
-                           <td>
-                              <div class="display-2"><?php echo $p['tamat_d1d3'] ?></div><br>
-                              <h6>Tamat D1-D3</h6>
-                           </td>
-                           <td>
-                              <div class="display-2"><?php echo $p['tamat_sma'] ?></div><br>
-                              <h6>Tamat SMA</h6>
-                           </td>
-                           <td>
-                              <div class="display-2"><?php echo $p['tamat_smp'] ?></div><br>
-                              <h6>Tamat SMP</h6>
-                           </td>
-                           <td>
-                              <div class="display-2"><?php echo $p['tamat_sd'] ?></div><br>
-                              <h6>Tamat SD</h6>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-            <?php }
-            } ?>
+                  <div class="col-md-3">
+                     <div class="card border-0">
+                        <div class="mt-5">
+                           <div class="display-2"><strong>1000<span>ha</span></strong></div>
+                        </div>
+                        <h6>Luas Wilayah</h6>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="card border-0">
+                        <div class="mt-5">
+                           <div class="display-2"><strong>100</strong></div>
+                        </div>
+                        <h6>Jumlah Penduduk</h6>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="card border-0">
+                        <div class="mt-5">
+                           <div class="display-2"><strong>4</strong></div>
+                        </div>
+                        <h6>Jumlah RT</h6>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="card border-0">
+                        <div class="mt-5">
+                           <div class="display-2"><strong>21</strong></div>
+                        </div>
+                        <h6>Jumlah Keluarga</h6>
+                     </div>
+                  </div>
          </div>
-         <div class="text-center mt-5 pt-5">
-            <h4>Fasilitas Pendidikan</h4>
-         </div>
-         <div class="col-md-12 row g-3 mt-2">
+         <div class="col-md-12 row g-3 mt-4">
             <div class="col-md-6 mt-5 color-hitam text-justify">
-               <div class="card card-body col-md-12 shadow-sm pe-4 ps-4">
-                  <h4 class="color-hijau-2">PAUD</h4>
-                  <p>Pendidikan Anak Usia Dini Pelita Hati terletak di RT 3 Kelurahan Mentawir</p>
-                  <div class="card card-body bg-light">
-                     <h6>Lokasi</h6>
-                     <p>Jl Benongan, RT 03, Kelurahan Mentawir</p>
-                  </div>
-                  <div class="card card-body mt-2 bg-light">
-                     <h6>Bangunan</h6>
-                     <img src="image/paud.jpeg">
-                  </div>
+               <div class="col-md-12 pe-4 ps-4">
+                  <p>Desa is Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae asperiores dolorum, incidunt dolores, a eligendi quas neque accusamus laboriosam, sapiente impedit fuga error. Minus tempore officia iusto laboriosam dolores provident! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam earum harum similique architecto atque aspernatur, doloremque, consectetur at distinctio, ut in impedit assumenda! Vitae vero nemo recusandae aliquid quaerat voluptatum.</p>
                </div>
             </div>
             <div class="col-md-6 mt-5 color-hitam text-justify">
-               <div class="card card-body col-md-12 shadow-sm pe-4 ps-4">
-                  <h4 class="color-hijau-2">SD</h4>
-                  <p>Sekolah Dasar Negeri 007 Sepaku merupakan satu-satunya SD yang ada di Kelurahan Mentawir
-                  </p>
-                  <div class="card card-body bg-light">
-                     <h6>Lokasi</h6>
-                     <p>Jl. Mulawarman, RT 02 Kelurahan Mentawir</p>
-                  </div>
-                  <div class="card card-body container mt-2 bg-light">
-                     <h6>Bangunan</h6>
-                     <img src="image/sd.jpg">
+               <div class="card card-body col-md-12 bg-light shadow-sm">
+                  <h6>Topografi</h6>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ad voluptatem omnis ipsum animi laudantium dolores voluptates inventore, ullam aut, deleniti hic porro. Provident enim dolorum optio cum repellat necessitatibus!</p>
+               </div>
+               <div class="col-md-12">
+                  <div class="accordion" id="">
+                     <div class="accordion-item mt-3 shadow-sm">
+                        <h2 class="accordion-header" id="format-gambar">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kontak" aria-expanded="false" aria-controls="collapseOne">
+                              <h6>Iklim</h6>
+                           </button>
+                        </h2>
+                        <div id="kontak" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fuga pariatur, ducimus ipsum facere cupiditate libero! Quaerat provident vel aperiam necessitatibus, explicabo debitis nam laudantium perspiciatis eveniet. Distinctio, labore natus?</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item mt-3 shadow-sm">
+                        <h2 class="accordion-header" id="format-gambar">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              <h6>Wilayah Penduduk</h6>
+                           </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eos quisquam sapiente vitae autem consequatur quos voluptatibus natus veniam illum. Eveniet similique nulla unde odit?</p>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
@@ -146,12 +152,11 @@ include('admin/db.php');
       </div>
    </div>
    <!-- end artikel -->
-
    <div style="height: 200px;"></div>
    <footer>
       <div class="container-fluid">
          <div class="text-center p-4">
-            &copy;<b>2022 - Kelurahan Mentawir | Website By </b> Penajam 25 KKN48 Universitas Mulawarman
+            &copy;<b>2022 - Desa | Website By </b> Pro
          </div>
    </footer>
    </div>
